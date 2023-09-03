@@ -13,7 +13,9 @@ interface signupApiInterface {
 
 export const authApi = createApi({
   reducerPath: "authApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000/" }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://zero1-mern-todolist-server.onrender.com/",
+  }),
   tagTypes: ["Auth"],
   endpoints: (builder) => ({
     loginApi: builder.mutation<any, loginApiInterface>({

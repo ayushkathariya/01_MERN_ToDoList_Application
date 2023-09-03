@@ -17,7 +17,9 @@ interface deleteTaskInterface {
 
 export const userApi = createApi({
   reducerPath: "userApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000/" }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://zero1-mern-todolist-server.onrender.com/",
+  }),
   tagTypes: ["Auth"],
   endpoints: (builder) => ({
     getUserProfile: builder.query<any, void>({
